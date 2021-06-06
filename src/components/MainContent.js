@@ -217,10 +217,10 @@ function MainContent(props) {
                                     </div>
                                     <div className="col-md-6 col-sm-6">
                                         <p style={{margin:0}}>Adi's phone</p>
-                                        <p style={{color:'blue'}}>{activity.key === "all" && totalTimeUsage.mobile}</p>
-                                        <p style={{color:'blue'}}>{activity.key === "class" && classTimeUsage.mobile}</p>
-                                        <p style={{color:'blue'}}>{activity.key === "study" && studyTimeUsage.mobile}</p>
-                                        <p style={{color:'blue'}}>{activity.key === "free" && freeTimeUsage.mobile}</p>
+                                        <p style={{color:'blue'}}>{activity.key === "all" && Math.floor(totalTimeUsage.mobile/60)+'h '+totalTimeUsage.mobile%60+'m'}</p>
+                                        <p style={{color:'blue'}}>{activity.key === "class" && Math.floor(classTimeUsage.mobile/60)+'h '+classTimeUsage.mobile%60+'m'}</p>
+                                        <p style={{color:'blue'}}>{activity.key === "study" && Math.floor(studyTimeUsage.mobile/60)+'h '+studyTimeUsage.mobile%60+'m'}</p>
+                                        <p style={{color:'blue'}}>{activity.key === "free" && Math.floor(studyTimeUsage.mobile/60)+'h '+studyTimeUsage.mobile%60+'m'}</p>
                                     </div>
                                 </div>
                                 <div className="row mt-5">
@@ -229,10 +229,10 @@ function MainContent(props) {
                                     </div>
                                     <div className="col-md-6 col-sm-6">
                                         <p style={{margin:0}}>Adi's laptop</p>
-                                        <p style={{color:'blue'}}>{activity.key === "all" && totalTimeUsage.laptop}</p>
-                                        <p style={{color:'blue'}}>{activity.key === "class" && classTimeUsage.laptop}</p>
-                                        <p style={{color:'blue'}}>{activity.key === "study" && studyTimeUsage.laptop}</p>
-                                        <p style={{color:'blue'}}>{activity.key === "free" && freeTimeUsage.laptop}</p>
+                                        <p style={{color:'blue'}}>{activity.key === "all" && Math.floor(totalTimeUsage.laptop/60)+'h '+totalTimeUsage.laptop%60+'m'}</p>
+                                        <p style={{color:'blue'}}>{activity.key === "class" && Math.floor(classTimeUsage.laptop/60)+'h '+classTimeUsage.laptop%60+'m'}</p>
+                                        <p style={{color:'blue'}}>{activity.key === "study" && Math.floor(studyTimeUsage.laptop/60)+'h '+studyTimeUsage.laptop%60+'m'}</p>
+                                        <p style={{color:'blue'}}>{activity.key === "free" && Math.floor(studyTimeUsage.laptop/60)+'h '+studyTimeUsage.laptop%60+'m'}</p>
                                     </div>
                                 </div>
                             </div>
