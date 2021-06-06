@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {  Fragment, useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import Header from './components/Header'
+import './App.css'
+import { Provider } from 'react-redux'
+import {store} from './store/store'
+import MainContent from './components/MainContent'
+import Popup from './components/Popup';
+
 
 function App() {
+  const [popup, setpopup] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <Fragment>
+        <Router>
+          <Switch>
+            <Route
+              exact
+              name="summary"
+              path="/summary"
+              component={() =>
+                <div>
+                  <Header/>
+                  <MainContent setpopup={()=>{
+                    setpopup(!popup)
+                  }}/>
+                  {popup && <Popup setpopup={()=>{
+                    setpopup(!popup)
+                  }}/>}
+                </div>
+              }
+            />
+            <Redirect to="/summary" />
+          </Switch>
+        </Router>
+      </Fragment>
+    </Provider>
+  )
 }
 
-export default App;
+export default App

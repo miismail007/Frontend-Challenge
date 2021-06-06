@@ -1,0 +1,40 @@
+.background {
+  background: linear-gradient(to right, #acbedd, #fcddc1);
+}
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.userNameLogo {
+  display: flex;
+}
+
+.userLogo {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #000;
+  border-radius: 100%;
+  margin: 0 15px;
+}
+.userName {
+  float: left;
+  display: flex;
+  justify-items: center;
+}
+.userName h5 {
+  display: inline;
+  margin-top: 5px;
+  font-weight: 700;
+}
+.optiondots {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}

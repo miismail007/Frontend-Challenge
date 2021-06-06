@@ -1,0 +1,70 @@
+.maindiv {
+}
+
+.maindiv h5 {
+  margin: 20px 0 30px 0;
+}
+
+.actionDiv {
+  padding: 10px;
+  background-color: #fff;
+  margin: 10px 0;
+}
+
+.actionBtn {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+  cursor: pointer;
+  border-radius: 100px;
+}
+.actionBtn p {
+  display: inline;
+  color: blue;
+  margin: 0;
+}
+
+.summaryDiv {
+  padding: 10px;
+  background-color: #fff;
+  margin: 10px 0;
+}
+
+.summaryDiv .innerCol {
+  border-right: 1px solid;
+  padding: 10px;
+}
+.colHeading {
+  font-weight: bold;
+  text-align: center;
+}
+
+.deviceDiv {
+  padding: 100px 0;
+}
+.progressDiv {
+  padding: 100px 0;
+}
+
+.progressDivHeading {
+  display: flex;
+  justify-content: space-between;
+}
+.progressTitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.progressValue {
+  font-weight: bold;
+  font-size: 18px;
+  color: #61f17b;
+}
+
+.progressMax {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
